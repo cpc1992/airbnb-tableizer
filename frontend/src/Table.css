@@ -1,0 +1,34 @@
+.Table-centered {
+  text-align: center;
+}
+
+.Table-main {
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: 300;
+}
+
+.Table-left {
+  text-align: left;
+}
+
+.Table-row {
+  height: 35px;
+}
+
+th {
+  font-weight: 500;
+  border-bottom: 1px solid rgba(217, 219, 221, 1);
+}
+
+td {
+  border-bottom: 1px solid rgba(217, 219, 221, 0.2);
+}
+
+.Table-shadow {
+  width: 100%;
+  max-width: 1464px;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  border-radius: 10px;
+}

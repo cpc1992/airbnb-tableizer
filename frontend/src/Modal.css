@@ -1,0 +1,86 @@
+.Modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba(49, 49, 49, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.Modal-main {
+  width: 50%;
+  max-width: 933px;
+  /* height: 50%; */
+  background-color: #d9dbdd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 5px 20px 5px 20px;
+  font-weight: 400;
+  color: black;
+}
+.Modal-main ul {
+  list-style-type: none;
+  padding: 0 0 0 5px;
+  margin-top: 5px;
+}
+.Modal-main li {
+  padding: 0 0 5px 0;
+}
+.Modal-main h3 {
+  font-weight: 500;
+  margin: 0 0 0 0;
+}
+
+.Modal-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-weight: 400;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(217, 219, 221, 0.7);
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.Modal-footer {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Modal-specs {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.Modal-links {
+  display: flex;
+  gap: 10px;
+}
+
+.Modal-svg {
+  height: 1.5rem;
+  fill: rgba(0, 0, 0, 0.5);
+  transition: all 400ms;
+}
+.Modal-svg:hover {
+  height: 1.5rem;
+  fill: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 1000px) {
+  .Modal-main {
+    width: 75%;
+  }
+}

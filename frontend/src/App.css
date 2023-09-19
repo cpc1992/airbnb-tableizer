@@ -1,0 +1,174 @@
+html {
+  background-color: #1d1d20;
+  color: var(--textcolor);
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+
+  /* color variables */
+  --textcolor: #d9dbdd;
+
+  --firstcolor: #1d1d20;
+  --secondcolor: #598392;
+  --thirdcolor: #aec3b0;
+  --fourthcolor: #eff6e0;
+  --fifthcolor: #8e5572;
+  --fifthcolor2: #c97b84;
+
+  /* font variables */
+  --welcomesize: 6rem;
+  --welcomeweight: 200;
+  --titlesize: 2rem;
+  --textsize: 1.1rem;
+  --textweight: 300;
+
+  /* debuggin variables */
+  --blackborder: 1px black solid;
+  --whiteborder: 1px white solid;
+  --redborder: 1px red solid;
+  --orangeborder: 1px orange solid;
+  --yellowborder: 1px yellow solid;
+  --greenborder: 1px lightgreen solid;
+  --blueborder: 1px lightblue solid;
+  --purpleborder: 1px lavender solid;
+  --pinkborder: 1px pink solid;
+
+  /* transition speed */
+  --transitionspeedfast: 0.3s;
+  --transitionspeedmid: 0.5s;
+  --transitionspeedslow: 0.7s;
+
+  /* padding for border */
+  --leftborderpadding: 25px;
+
+  /* colors for the graph nodes */
+  --coral: #ff5e5b;
+  --violet: #8367c7;
+  --teal: #5fb8c2;
+  --rosegold: #e49273;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("https://source.unsplash.com/collection/2483198");
+  background-size: cover;
+}
+
+#root {
+  box-sizing: border-box;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.App-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1464px;
+}
+
+.App-nav-logo {
+  fill: rgba(217, 219, 221, 0.8);
+  height: 50px;
+  display: block;
+  transition: all 400ms;
+}
+.App-nav-logo:hover {
+  fill: rgb(198, 216, 255, 1);
+  /* fill: white; */
+  cursor: pointer;
+}
+.App-nav-info {
+  color: rgba(217, 219, 221, 0.8);
+  transition: all 400ms;
+}
+.App-nav-info:hover {
+  color: rgb(198, 216, 255, 1);
+  cursor: pointer;
+}
+
+.App-nav-title {
+  font-weight: 300;
+  margin: 0px;
+}
+
+.App-helloTraveler {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.App-bigtext {
+  font-weight: 100;
+  font-size: 4rem;
+  margin: 0 0 0 0;
+}
+
+.App-smalltext {
+  font-weight: 100;
+  font-size: 2rem;
+  margin: 0 0 0 0;
+}
+
+.App-form {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.App-input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  color: inherit;
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+.App-input:focus {
+  outline: none;
+}
+
+.App-button {
+  width: 110px;
+  font-size: 1.1rem;
+  height: 30px;
+  background: none;
+  border: none;
+  border-radius: 15px;
+  color: inherit;
+  border: 1px solid white;
+  transition: all 300ms;
+}
+
+.App-button:hover {
+  background: rgb(198, 216, 255, 1);
+  color: #1d1d20;
+  cursor: pointer;
+}
+
+.App-button:active {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(217, 219, 221, 1);
+}
+
+.App-googleSheet {
+  font-size: 1.2rem;
+}
+
+.App-errormsg {
+  color: red;
+}
+
+a {
+  color: #c6d8ff;
+}
