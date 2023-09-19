@@ -15,8 +15,8 @@
 
 .Modal-main {
   width: 50%;
+  max-height: 80%;
   max-width: 933px;
-  /* height: 50%; */
   background-color: #d9dbdd;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,7 @@
   padding: 5px 20px 5px 20px;
   font-weight: 400;
   color: black;
+  overflow: scroll;
 }
 .Modal-main ul {
   list-style-type: none;
