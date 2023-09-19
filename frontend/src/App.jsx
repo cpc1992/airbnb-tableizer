@@ -22,8 +22,6 @@ function App() {
 
     // let backendAPI = "http://localhost:5000/apiv1";
     let backendAPI = import.meta.env.VITE_BACKEND;
-    console.log(backendAPI);
-
     let res;
 
     try {
