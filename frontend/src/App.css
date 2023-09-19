@@ -172,3 +172,12 @@ html {
 a {
   color: #c6d8ff;
 }
+
+@media (max-width: 1463px) {
+  .App-nav-logo {
+    margin-left: 10px;
+  }
+  .App-nav-info {
+    margin-right: 10px;
+  }
+}
