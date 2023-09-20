@@ -26,7 +26,7 @@
   padding: 5px 20px 5px 20px;
   font-weight: 400;
   color: black;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 .Modal-main ul {
   list-style-type: none;
@@ -83,5 +83,11 @@
 @media (max-width: 1000px) {
   .Modal-main {
     width: 75%;
+  }
+}
+
+@media (max-width: 675px) {
+  .Modal-main {
+    overflow: scroll;
   }
 }
