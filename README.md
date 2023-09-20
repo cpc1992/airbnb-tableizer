@@ -2,6 +2,8 @@
 
 A simple tool that can scrape the listings from an Airbnb search link and generate a Google Sheet with the results. 
 
+Live Site: https://airbnb-tableizer.vercel.app/
+
 ## How to use:
 
 1. Perform a search on the Airbnb website. Specify location, check in & check out dates, and number of guests for better results.
