@@ -27,7 +27,7 @@ function App() {
     try {
       res = await axios.post(backendAPI, { url: inputLink });
     } catch (e) {
-      setError("Whoops! Error in our backend. Please try again later.");
+      setError("Whoops! Error in our backend. Please try with another link or try again in a minute.");
       setLoading(false);
       return;
     }
