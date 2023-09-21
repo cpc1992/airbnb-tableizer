@@ -15,7 +15,7 @@ Live Site: https://airbnb-tableizer.vercel.app/
 ## Usage notes:
 
 * Some listings incorrectly write their bed & bedroom data into the bathroom attribute.
-* If you get a server error, try again later or try with a different link. This happens occasionally when the destination is somewhere outside of the US.
+* If you get a server error, try again later or try with a different link. This happens occasionally when the destination is somewhere outside of the US. Or if this is  the first request of the day and Vercel has to cold start.
 * the "Accurate" column indicates whether the price is the true price after all the service/cleaning fees or not.
 
 ## Technologies used:
