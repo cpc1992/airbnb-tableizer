@@ -44,7 +44,7 @@ function App() {
   };
 
   useEffect(async () => {
-    let backendAPI = import.meta.env.VITE_BACKEND;
+    let backendAPI = import.meta.env.VITE_BACKEND_CHECK;
     try {
       res = await axios.get(backendAPI);
       console.log('backend connected')
