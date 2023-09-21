@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Table from "./Table.jsx";
 import axios from "axios";
@@ -42,6 +42,18 @@ function App() {
     }
     setLoading(false);
   };
+
+  useEffect(async () => {
+    let backendAPI = import.meta.env.VITE_BACKEND;
+    try {
+      res = await axios.get(backendAPI);
+      console.log('backend connected')
+    } catch (e) {
+      console.log('backend error')
+      console.log(e)
+    }
+
+  },[])
 
   return (
     <>
