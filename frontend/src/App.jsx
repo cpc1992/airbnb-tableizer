@@ -23,14 +23,28 @@ function App() {
     // let backendAPI = "http://localhost:5000/apiv1";
     let backendAPI = import.meta.env.VITE_BACKEND;
     let res;
+    let redrive = false;
 
     try {
       res = await axios.post(backendAPI, { url: inputLink });
     } catch (e) {
-      setError("Whoops! Error in our backend. Please try with another link or try again in a minute.");
-      setLoading(false);
-      return;
+      redrive = true;
     }
+
+    // sometimes i receive cors errors (despite allowing all cors), google sheets takes too long, or the proxy does not call from the US.
+    // these errors are inconsistent and will return a 504. but if you run again, it works. here is a redrive to mitigate this. 
+    if (redrive == true){
+      redrive = false;
+      try {
+        res = await axios.post(backendAPI, { url: inputLink });
+      } catch (e) {
+        // if redrive fails, give up
+        setError("Whoops! Error in our backend. Please try again in a minute or try with another link.");
+        setLoading(false);
+        return;
+      }
+    }
+
     // if we are here then we got something back from our api
 
     if (res.data.ok) {
