@@ -15,13 +15,13 @@ Live Site: https://airbnb-tableizer.vercel.app/
 ## Usage notes:
 
 * Some listings incorrectly write their bed & bedroom data into the bathroom attribute.
-* If you get a server error, try again later or try with a different link. This happens occasionally when the destination is somewhere outside of the US. Or if this is  the first request of the day and Vercel has to cold start.
+* If you get a server error, try again later or try with a different link. This happens occasionally when the destination is somewhere outside of the US. Or if this is the first request of the day and server has to cold start.
 * the "Accurate" column indicates whether the price is the true price after all the service/cleaning fees or not.
 
 ## Technologies used:
 
-The front end is written using React.   
-The back end is handled by a Flask server.  
+The front-end is written using React.   
+The back-end is handled by a Flask server.  
 The scraping is done with BeautifulSoup.  
 The Google Sheet is generated using Gspread and Gspread-formatting.  
 

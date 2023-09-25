@@ -49,7 +49,7 @@ export default function Modal({ setModal }) {
             the bathrooms attribute.
             <br />* The Accurate column indicates if the price displayed is the
             price <i>after</i> service and cleaning fees.
-            <br />* If you get a server error, try again later or try with a different link. This happens occasionally when the destination is somewhere outside of the US. Or if this is the first request of the day, the server has to cold start.
+            <br />* If you get a server error, try again later or try with a different link. This happens occasionally when the destination is somewhere outside of the US. Or if this is the first request of the day and the server has to cold start.
           </p>
           <h3>Specs:</h3>
           <p className="Modal-specs">
