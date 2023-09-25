@@ -25,11 +25,6 @@ The back end is handled by a Flask server.
 The scraping is done with BeautifulSoup.  
 The Google Sheet is generated using Gspread and Gspread-formatting.  
 
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
 ## Authors
 
 Clifford Chan (cpc1992)
