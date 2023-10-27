@@ -26,7 +26,7 @@ function App() {
     let redrive = false;
 
     try {
-      res = await axios.post(backendAPI, { url: inputLink });
+      res = await axios.post(backendAPI, { url: inputLink }, { timeout: 20000 });
     } catch (e) {
       redrive = true;
     }
@@ -36,7 +36,7 @@ function App() {
     if (redrive == true){
       redrive = false;
       try {
-        res = await axios.post(backendAPI, { url: inputLink });
+        res = await axios.post(backendAPI, { url: inputLink }, { timeout: 20000 });
       } catch (e) {
         // if redrive fails, give up
         setError("Whoops! Error in our backend. Please try again in a minute or try with another link.");
