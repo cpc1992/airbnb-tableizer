@@ -58,7 +58,7 @@ export default function Modal({ setModal }) {
             generated using Gspread and Gspread-formatting.
           </p>
           <div className="Modal-footer">
-            <div>CliffordPChan@gmail.com</div>
+            <div>cliffordpchan@gmail.com</div>
             <div className="Modal-links">
               <div className="Modal-icon" id="github">
                 <a
