@@ -26,7 +26,9 @@ function App() {
     let redrive = false;
 
     try {
+      let start = Date.now();
       res = await axios.post(backendAPI, { url: inputLink }, { timeout: 20000 });
+      console.log(`Request Latency: ${(Date.now() - start) / 1000}s`)
     } catch (e) {
       redrive = true;
     }
@@ -36,7 +38,9 @@ function App() {
     if (redrive == true){
       redrive = false;
       try {
+        let start = Date.now();
         res = await axios.post(backendAPI, { url: inputLink }, { timeout: 20000 });
+        console.log(`Redrive request Latency: ${(Date.now() - start) / 1000}s`)
       } catch (e) {
         // if redrive fails, give up
         setError("Whoops! Error in our backend. Please try again in a minute or try with another link.");
