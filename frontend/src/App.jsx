@@ -20,30 +20,40 @@ function App() {
       inputLink = "https://www.airbnb.com/s/California--United-States/homes";
     }
 
-    // let backendAPI = "http://localhost:5000/apiv1";
+    // let backendAPI = "http://localhost:8080/apiv2";
     let backendAPI = import.meta.env.VITE_BACKEND;
     let res;
     let redrive = false;
 
     try {
       let start = Date.now();
-      res = await axios.post(backendAPI, { url: inputLink }, { timeout: 20000 });
-      console.log(`Request Latency: ${(Date.now() - start) / 1000}s`)
+      res = await axios.post(
+        backendAPI,
+        { url: inputLink },
+        { timeout: 20000 }
+      );
+      console.log(`Request Latency: ${(Date.now() - start) / 1000}s`);
     } catch (e) {
       redrive = true;
     }
 
     // sometimes i receive cors errors (despite allowing all cors), google sheets takes too long, or the proxy does not call from the US.
-    // these errors are inconsistent and will return a 504. but if you run again, it works. here is a redrive to mitigate this. 
-    if (redrive == true){
+    // these errors are inconsistent and will return a 504. but if you run again, it works. here is a redrive to mitigate this.
+    if (redrive == true) {
       redrive = false;
       try {
         let start = Date.now();
-        res = await axios.post(backendAPI, { url: inputLink }, { timeout: 20000 });
-        console.log(`Redrive request Latency: ${(Date.now() - start) / 1000}s`)
+        res = await axios.post(
+          backendAPI,
+          { url: inputLink },
+          { timeout: 20000 }
+        );
+        console.log(`Redrive request Latency: ${(Date.now() - start) / 1000}s`);
       } catch (e) {
         // if redrive fails, give up
-        setError("Whoops! Error in our backend. Please try again in a minute or try with another link.");
+        setError(
+          "Whoops! Error in our backend. Please try again in a minute or try with another link."
+        );
         setLoading(false);
         return;
       }
@@ -51,6 +61,7 @@ function App() {
 
     // if we are here then we got something back from our api
 
+    console.log(res.data.ok);
     if (res.data.ok) {
       // build table and set sheetlink
       setSheetLink(res.data.link);
@@ -60,18 +71,6 @@ function App() {
     }
     setLoading(false);
   };
-
-  useEffect(async () => {
-    let backendAPI = import.meta.env.VITE_BACKEND_CHECK;
-    try {
-      let res = await axios.get(backendAPI);
-      console.log('backend connected')
-    } catch (e) {
-      console.log('backend error')
-      console.log(e)
-    }
-
-  },[])
 
   return (
     <>
