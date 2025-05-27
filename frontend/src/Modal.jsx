@@ -45,17 +45,19 @@ export default function Modal({ setModal }) {
           </ul>
           <h3>Usage notes:</h3>
           <p className="Modal-specs">
-            * Some listings incorrectly list the bed & bedroom information in
-            the bathrooms attribute.
-            <br />* The Accurate column indicates if the price displayed is the
-            price <i>after</i> service and cleaning fees.
-            <br />* If you get a server error, try again later or try with a different link. This happens occasionally when the destination is somewhere outside of the US. Or if this is the first request of the day and the server has to cold start.
+            * If you get a response with foreign currency, try again with the
+            same link. This happens because the proxy service I use sometimes
+            make calls from servers in other coutries despite my specifying USA
+            only.
+            <br />* If you get a server error, try again later or try with a
+            different link. This can happens when the proxy service uses a
+            server from a country that airbnb does not serve.
           </p>
           <h3>Specs:</h3>
           <p className="Modal-specs">
-            This app consists of a React frontend and a Flask backend. The
-            webscraping is done with BeautifulSoup and the Google Sheet is
-            generated using Gspread and Gspread-formatting.
+            This app consists of a React frontend and a golang backend. The
+            webscraping is done with gjson and the Google Sheet is generated
+            using google apis.
           </p>
           <div className="Modal-footer">
             <div>cliffordpchan@gmail.com</div>
