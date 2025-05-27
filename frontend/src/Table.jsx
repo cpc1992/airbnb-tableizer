@@ -1,8 +1,6 @@
 import "./Table.css";
 
 function Table({ results }) {
-  console.log("herer!!");
-  console.log(results);
   return (
     <div className="Table-shadow">
       <table className="Table-main">

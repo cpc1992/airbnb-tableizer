@@ -60,8 +60,6 @@ function App() {
     }
 
     // if we are here then we got something back from our api
-
-    console.log(res.data.ok);
     if (res.data.ok) {
       // build table and set sheetlink
       setSheetLink(res.data.link);
