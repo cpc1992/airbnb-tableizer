@@ -30,7 +30,7 @@ function App() {
       res = await axios.post(
         backendAPI,
         { url: inputLink },
-        { timeout: 20000 }
+        { timeout: 60000 }
       );
       console.log(`Request Latency: ${(Date.now() - start) / 1000}s`);
     } catch (e) {
@@ -46,7 +46,7 @@ function App() {
         res = await axios.post(
           backendAPI,
           { url: inputLink },
-          { timeout: 20000 }
+          { timeout: 60000 }
         );
         console.log(`Redrive request Latency: ${(Date.now() - start) / 1000}s`);
       } catch (e) {
